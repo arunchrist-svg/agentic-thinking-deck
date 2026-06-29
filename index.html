@@ -636,46 +636,42 @@
     <div style="display:grid; grid-template-columns:1fr 1.6fr; gap:80px; height:100%; align-items:center">
 
       <div>
-        <div class="eyebrow" style="margin-bottom:16px">08 · FINTECH EXAMPLE</div>
-        <div class="display display-lg">Smart<br><span class="accent">Loan</span><br>Agent</div>
+        <div class="eyebrow" style="margin-bottom:16px">08 · EXAMPLE</div>
+        <div class="display display-lg">Order<br><span class="accent">Support</span><br>Agent</div>
         <div style="margin-top:32px; display:flex; flex-direction:column; gap:10px">
-          <div class="s9-flow">User Query</div>
+          <div class="s9-flow">User: "Where is my order?"</div>
           <div class="s9-arrow">↓</div>
-          <div class="s9-flow">Classify Intent</div>
+          <div class="s9-flow">LLM decides: call get_order()</div>
           <div class="s9-arrow">↓</div>
-          <div class="s9-flow">Route to Tool</div>
+          <div class="s9-flow">Tool returns status + ETA</div>
           <div class="s9-arrow">↓</div>
-          <div class="s9-flow s9-flow-lime">Respond + Act</div>
+          <div class="s9-flow s9-flow-lime">Agent replies with real data</div>
         </div>
       </div>
 
       <div>
         <div class="eyebrow" style="margin-bottom:20px">TOOLS THE AGENT CAN CALL</div>
         <div class="s9-tool" style="border-top:1px solid var(--border)">
-          <span class="s9-fn accent">lookup_order(id)</span>
-          <span class="s9-tdesc">Fetch live loan data from core banking system</span>
+          <span class="s9-fn accent">get_order(order_id)</span>
+          <span class="s9-tdesc">Fetch order status, ETA, and tracking link</span>
         </div>
         <div class="s9-tool">
-          <span class="s9-fn">check_eligibility()</span>
-          <span class="s9-tdesc">Run rules engine for upgrade / top-up eligibility</span>
+          <span class="s9-fn">cancel_order(order_id)</span>
+          <span class="s9-tdesc">Cancel if within the cancellation window</span>
         </div>
         <div class="s9-tool">
-          <span class="s9-fn">get_emi_schedule()</span>
-          <span class="s9-tdesc">Pull repayment schedule and missed payment flags</span>
+          <span class="s9-fn">issue_refund(order_id)</span>
+          <span class="s9-tdesc">Trigger refund to original payment method</span>
         </div>
         <div class="s9-tool">
-          <span class="s9-fn">create_complaint()</span>
-          <span class="s9-tdesc">Log formal complaint in CRM with priority routing</span>
-        </div>
-        <div class="s9-tool">
-          <span class="s9-fn">escalate_to_human()</span>
-          <span class="s9-tdesc">Trigger live agent handoff for complex cases</span>
+          <span class="s9-fn">search_faq(query)</span>
+          <span class="s9-tdesc">Answer policy questions from knowledge base</span>
         </div>
         <div class="s9-tool" style="border-bottom:none">
-          <span class="s9-fn">send_notification()</span>
-          <span class="s9-tdesc">Push WhatsApp / SMS confirmation after action</span>
+          <span class="s9-fn">escalate_to_human()</span>
+          <span class="s9-tdesc">Hand off to a live agent when confidence is low</span>
         </div>
-        <p class="body-sm mt-24 accent">Replace the chat box with a tool-calling orchestrator.</p>
+        <p class="body-sm mt-24 accent">Five tools. One agent. Handles 80% of support tickets.</p>
       </div>
 
     </div>
